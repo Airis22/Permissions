@@ -25,7 +25,7 @@ export function PermissionLayout(
             ): (
                 <TouchableOpacity
                 style={styles.button}
-                onPress={() => requestPermission}>
+                onPress={() => requestPermission()}>
                     <Text>Autorizar</Text>
                 </TouchableOpacity>
             )
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     root: {
         display: "flex",
         flexDirection: "row",
-        gap: 16,
+        gap: 10,
         alignItems: "center"
     },
     title:{
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     button: {
         paddingVertical: 8,
         paddingHorizontal: 16,
-        backgroundColor: "#90d1e8",
+        backgroundColor: "#fff200",
         borderRadius: 20,
     },
     buttonText:{
