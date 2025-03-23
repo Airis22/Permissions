@@ -12,11 +12,11 @@
       "supportsTablet": true,
       "infoPlist": {
       "NSCameraUsageDescription": "Esta aplicación requiere acceso a la camara para subir tu foto de perfil.",
-      "NSPhotoLibraryUsageDescription": "esta aplicacion requiere el uso de fotos",
+      "NSPhotoLibraryUsageDescription": "Esta aplicación requiere el uso de fotos",
       "NSMicrophoneUsageDescription": "Esta aplicación requiere acceso a al microfono para guardar notas de voz.",
       "NSContactsUsageDescription": "Esta aplicación requiere acceso a los contactos para mejor experiencia.",
-      "NSLocationUsageDescription": "Esta aplicacón requiere permiso de locacion",
-      "NSCalendarsFullAccessUsageDescription": "esta aplicación requiere el uso del calendario"
+      "NSLocationUsageDescription": "Esta aplicacón requiere permiso de ubicación para mejorar su experiencia",
+      "NSCalendarsFullAccessUsageDescription": "Esta aplicación requiere el uso del calendario, para mejorar su experiencia"
     }
     },
     "android": {
@@ -48,7 +48,47 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow $(PRODUCT_NAME) to access your contacts."
+        }
+      ],
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "The app needs to access your calendar."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+    ]
     ],
     "experiments": {
       "typedRoutes": true
